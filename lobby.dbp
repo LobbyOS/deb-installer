@@ -1,0 +1,72 @@
+[DEBREATE-0.7.10]
+<<CTRL>>
+Package: lobby
+Version: 0.1
+Source: http://lobby.subinsb.com
+Maintainer: Subin Siby <subins2000@gmail.com>
+Section: web
+Homepage: http://lobby.subinsb.com
+Priority: standard
+Architecture: all
+Depends: bash (>=4.0)
+Description: Lobby - http://lobby.subinsb.com
+ Lobby - http://lobby.subinsb.com
+
+<</CTRL>>
+<<FILES>>
+1
+/home/simsu/Other/projects/Web/Lobby/Zed/Auto/Deb/lobby/src/bin/lobby* -> lobby -> /usr/bin
+/home/simsu/Other/projects/Web/Lobby/Zed/Auto/Deb/lobby/src/lobby.svg* -> lobby.svg -> /usr/share/icons/hicolor/scalable/apps
+/home/simsu/Other/projects/Web/Lobby/Zed/Auto/Deb/lobby/src/lobby/lobby-install-pre.sh* -> lobby-install-pre.sh -> /usr/share/lobby
+/home/simsu/Other/projects/Web/Lobby/Zed/Auto/Deb/lobby/src/lobby/lobby-install.sh* -> lobby-install.sh -> /usr/share/lobby
+<</FILES>>
+<<SCRIPTS>>
+<<PREINST>>
+0
+<</PREINST>>
+<<POSTINST>>
+0
+<</POSTINST>>
+<<PRERM>>
+1
+#! /bin/bash -e
+
+rm "/usr/bin/lobby"
+<</PRERM>>
+<<POSTRM>>
+0
+<</POSTRM>>
+<</SCRIPTS>>
+<<CHANGELOG>>
+<<DEST>>DEFAULT<</DEST>>
+lobby (0.1) all; urgency=low
+
+  * Init
+
+ -- Subin Siby <subins2000@gmail.com>  Sun, 24 Jan 2016 16:31:03 +0530
+
+
+<</CHANGELOG>>
+<<COPYRIGHT>>
+Copyright Subin Siby 2016
+Licensed under Apache v 2.0
+https://www.apache.org/licenses/LICENSE-2.0
+<</COPYRIGHT>>
+<<MENU>>
+1
+Name=Lobby
+Version=1.0
+Exec=lobby
+Comment=Open Lobby In Browser
+Icon=lobby
+Type=Application
+Terminal=false
+StartupNotify=true
+Encoding=UTF-8
+Categories=Network;Utility;Application;
+<</MENU>>
+<<BUILD>>
+0
+1
+1
+<</BUILD>>

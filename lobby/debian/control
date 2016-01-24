@@ -1,0 +1,12 @@
+Package: lobby
+Version: 0.1
+Source: http://lobby.subinsb.com
+Maintainer: Subin Siby <subins2000@gmail.com>
+Section: web
+Homepage: http://lobby.subinsb.com
+Priority: standard
+Architecture: all
+Depends: bash (>=4.0)
+Description: Lobby - http://lobby.subinsb.com
+ Lobby - http://lobby.subinsb.com
+

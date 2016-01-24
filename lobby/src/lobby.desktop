@@ -1,0 +1,10 @@
+Name=Lobby
+Version=1.0
+Exec=lobby
+Comment=Open Lobby In Browser
+Icon=lobby
+Type=Application
+Terminal=false
+StartupNotify=true
+Encoding=UTF-8
+Categories=Network;Utility;Application;
