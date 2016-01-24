@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=Lobby
-Comment=Open Lobby In Browser
-Icon=lobby
-Exec=lobby
-Terminal=false
-Type=Application
-Categories=GTK;GNOME;
-StartupNotify=true
