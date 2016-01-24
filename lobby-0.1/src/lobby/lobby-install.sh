@@ -19,15 +19,17 @@ if [ "$EUID" -ne 0 ]
 fi
 
 # Update sources
-echo "'apt-get update' should be ran to ensure dependencies availability. Make sure you have the 'main' and 'universe' repositories enabled. Shall I run 'apt-get update' for you (y/n) ?"
+echo "'apt-get update' should be ran to ensure availability of dependencies."
+echo "Make sure you have the 'main' and 'universe' repositories enabled."
+echo "Shall I run 'apt-get update' for you (y/n) ?"
 read update
 if [ $update = "y" ]; then
   apt-get update
 fi
 
 # Check if PHP 7 available
-php7 = $(apt-cache show php7.0 | grep 'unable to')
-if [ "" == "$php7" ]; then
+phpseven=$(apt-cache show php7.0 | grep 'nable to')
+if [ "$phpseven" == "" ]; then
   depends=("apache2" "mysql-server" "php7.0-mysql" "php7.0-curl" "php7.0-json" "libapache2-mod-php7.0" "wget" "unzip")
 else
   depends=("apache2" "mysql-server" "php5-mysql" "php5-curl" "php5-json" "libapache2-mod-php5" "wget" "unzip")

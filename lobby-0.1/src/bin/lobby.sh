@@ -2,13 +2,16 @@
 
 # Copyleft Subin Siby - http://subinsb.com
 
+# /usr/share/lobby
+LOBBY_DIR="../lobby"
+
 # Check if Lobby installed
-if [ -f /usr/share/lobby/installed.conf ]; then
-  URL=$(</usr/share/lobby/installed.conf)
+if [ -f $LOBBY_DIR/installed.conf ]; then
+  URL=$(<$LOBBY_DIR/installed.conf)
   [[ -x $BROWSER ]] && exec "$BROWSER" "$URL"
   path=$(which xdg-open || which gnome-open) && exec "$path" "$URL"
   echo "Can't find browser"
 else
   # Run Setup
-  x-terminal-emulator -e "echo \"Welcome to Lobby Setup.\" && sudo /usr/share/lobby/lobby-install.sh"
+  x-terminal-emulator -e "$LOBBY_DIR/lobby-install-pre.sh"
 fi
