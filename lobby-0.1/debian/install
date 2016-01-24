@@ -1,0 +1,4 @@
+src/bin/lobby.sh /usr/bin
+src/lobby /usr/share/lobby
+src/lobby.svg /usr/share/icons/hicolor/scalable/apps
+src/lobby.desktop /usr/share/applications
