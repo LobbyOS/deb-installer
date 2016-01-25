@@ -6,7 +6,7 @@ Source: http://lobby.subinsb.com
 Maintainer: Subin Siby <subins2000@gmail.com>
 Section: web
 Homepage: http://lobby.subinsb.com
-Priority: standard
+Priority: optional
 Architecture: all
 Depends: bash (>=4.0)
 Description: Lobby - http://lobby.subinsb.com
@@ -25,7 +25,10 @@ Description: Lobby - http://lobby.subinsb.com
 0
 <</PREINST>>
 <<POSTINST>>
-0
+1
+#! /bin/bash -e
+
+ln -fs "/usr/bin/lobby" "/usr/bin/lobby"
 <</POSTINST>>
 <<PRERM>>
 1

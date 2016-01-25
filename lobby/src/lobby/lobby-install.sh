@@ -28,7 +28,7 @@ if [ $update = "y" ]; then
 fi
 
 # Check if PHP 7 available
-phpseven=$(dpkg -s php7.0 2>&1 | grep 'no information')
+phpseven=$(apt-cache show php7.0 2>&1 | grep 'No packages')
 if [ "$phpseven" == "" ]; then
   echo "Using PHP 7"
   depends=("apache2" "mysql-server" "php7.0-mysql" "php7.0-curl" "php7.0-json" "libapache2-mod-php7.0" "wget" "unzip")
@@ -95,8 +95,6 @@ cat > /etc/apache2/sites-available/lobby-$domain.conf << EOF
 	<Directory $workingDir/>
 		Options Indexes FollowSymLinks
 		AllowOverride All
-		Order allow,deny
-		allow from all
 		Require all granted
 	</Directory>
 	ErrorLog /var/log/apache2/error.log
