@@ -119,5 +119,5 @@ http://$domain
 EOF
 
 echo -e "${green}Lobby was successfully installed in $workingDir${NC}"
-echo "You can now start the installation process from http://$domain Press any key to exit"
+echo "You can now start the installation process from '${green}http://$domain${NC}' Press any key to exit"
 read y

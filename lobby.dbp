@@ -15,6 +15,8 @@ Description: Lobby - http://lobby.subinsb.com
 <</CTRL>>
 <<FILES>>
 1
+/home/simsu/Other/projects/Web/Lobby/Zed/Auto/Deb/lobby/src/lobby/before-remove.sh* -> before-remove.sh -> /usr/share/lobby
+/home/simsu/Other/projects/Web/Lobby/Zed/Auto/Deb/lobby/src/lobby/after-install.sh* -> after-install.sh -> /usr/share/lobby
 /home/simsu/Other/projects/Web/Lobby/Zed/Auto/Deb/lobby/src/bin/lobby* -> lobby -> /usr/bin
 /home/simsu/Other/projects/Web/Lobby/Zed/Auto/Deb/lobby/src/lobby.svg* -> lobby.svg -> /usr/share/icons/hicolor/scalable/apps
 /home/simsu/Other/projects/Web/Lobby/Zed/Auto/Deb/lobby/src/lobby/lobby-install-pre.sh* -> lobby-install-pre.sh -> /usr/share/lobby
@@ -28,13 +30,13 @@ Description: Lobby - http://lobby.subinsb.com
 1
 #! /bin/bash -e
 
-ln -fs "/usr/bin/lobby" "/usr/bin/lobby"
+/usr/share/lobby/after-install.sh
 <</POSTINST>>
 <<PRERM>>
 1
 #! /bin/bash -e
 
-rm "/usr/bin/lobby"
+/usr/share/lobby/before-remove.sh
 <</PRERM>>
 <<POSTRM>>
 0
@@ -66,7 +68,7 @@ Type=Application
 Terminal=false
 StartupNotify=true
 Encoding=UTF-8
-Categories=Network;Utility;Application;
+Categories=Network;Application;
 <</MENU>>
 <<BUILD>>
 0
