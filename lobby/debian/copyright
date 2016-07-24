@@ -3,9 +3,9 @@ Upstream-Name: lobby
 Source: <https://github.com/LobbyOS/deb-installer>
 
 Files: *
-Copyright: <years> <put author's name and email here>
-           <years> <likewise for another author>
-License: Copyright 2016 Subin Siby
+Copyright: 2016-present Subin Siby
+           2016-present Suriyaa Kudo
+License: Copyright 2016-present Subin Siby
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
